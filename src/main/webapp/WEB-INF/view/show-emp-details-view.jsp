@@ -13,9 +13,11 @@
 <body>
 <center>
     <h1>Dear brother!</h1>
-<hr>
+<hr><hr>
     <h2>
-        Your name is ${param.employeeName}
+<%--        Your name is ${param.employeeName}--%>
+        Hi ${employee.name} ${employee.surname},
+    your salary = ${employee.salary}$ =)
     </h2>
 <hr>
     <a href="/">To main</a><hr>
