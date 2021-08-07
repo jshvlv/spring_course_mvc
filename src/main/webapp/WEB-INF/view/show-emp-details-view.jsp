@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: Lap
@@ -12,13 +13,23 @@
 </head>
 <body>
 <center>
-    <h1>Dear brother!</h1>
+    <h1>Hola Amigo</h1>
 <hr><hr>
-    <h2>
+    <h5>
 <%--        Your name is ${param.employeeName}--%>
-        Hi ${employee.name} ${employee.surname},
-    your salary = ${employee.salary}$ =)
-    </h2>
+        Hi ${employee.name} ${employee.surname}<br>
+    your salary = ${employee.salary} dollars<br>
+        and department is ${employee.department}.<br>
+        Car, that you won't own is ${employee.carBrand} azzaza...<br>
+        Languages:
+        <ul>
+            <c:forEach var="lang" items="${employee.languages}">
+                <li>
+                    ${lang}
+                </li>
+            </c:forEach>
+        </ul>
+    </h5>
 <hr>
     <a href="/">To main</a><hr>
     <a href="/askDetails">to details</a>

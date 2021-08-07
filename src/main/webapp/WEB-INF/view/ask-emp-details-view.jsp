@@ -15,10 +15,31 @@
 <center>
 
     <form:form action = "showDetails" modelAttribute="employee">
-        Name <form:input path="name"/><hr>
-        Surname <form:input path="surname"/><hr>
-        Salary <form:input path="salary"/><hr>
-        <input type="submit" value="OK">
+        Name <form:input path="name" />
+        <form:errors path="name"/>
+        <hr>
+        Surname <form:input path="surname"/>
+        <form:errors path="surname"/>
+        <hr>
+        Salary <form:input path="salary"/>
+        <hr>
+
+        Department <form:select path="department">
+        <form:options items="${employee.departments}"/>
+    </form:select><hr>
+
+        Which car do you want? <br>
+        <form:radiobuttons path="carBrand" items="${employee.carBrands}"/><hr>
+
+        Foreign languages? <br>
+      
+        <form:checkboxes path="languages" items="${employee.languageList}"/>
+
+
+
+
+<hr>
+        <input type="submit" value="OK" style="width: 200px">
     </form:form>
 
 
