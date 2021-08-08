@@ -22,6 +22,8 @@
         <form:errors path="surname"/>
         <hr>
         Salary <form:input path="salary"/>
+        <form:errors path="salary"/>
+
         <hr>
 
         Department <form:select path="department">
@@ -31,11 +33,18 @@
         Which car do you want? <br>
         <form:radiobuttons path="carBrand" items="${employee.carBrands}"/><hr>
 
-        Foreign languages? <br>
+        Choose languages? <br>
       
-        <form:checkboxes path="languages" items="${employee.languageList}"/>
+        <form:checkboxes path="languages" items="${employee.languageList}"/><hr>
 
 
+        Your phone <form:input path="phoneNumber" />
+        <form:errors path="phoneNumber"/>
+        <hr>
+
+        Your email <form:input path="email" />
+        <form:errors path="email"/>
+        <hr>
 
 
 <hr>

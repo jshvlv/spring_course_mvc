@@ -28,7 +28,9 @@
                     ${lang}
                 </li>
             </c:forEach>
-        </ul>
+        </ul> <br>
+        Phone number ${employee.phoneNumber}<br>
+        email ${employee.email}<br>
     </h5>
 <hr>
     <a href="/">To main</a><hr>
